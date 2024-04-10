@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$defaultfont: "Ubuntu", sans-serif
+$primarycolor: #000
+$secondarycolor: #f1c30f
+$white: #fff
+
+@mixin dflex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin position-absolute
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0 
+    right: 0
+
+html, body
+    min-height: 100% 
+body
+    margin: 0
+    padding: 0
+    font-family: $defaultfont
+    color: #323232
+    font-size: 14px
+    overflow-x: hidden
+    background: #fff
+.defaultfont
+    font-family: $defaultfont
+a
+    text-decoration: none !important
+.primary-color
+    color: $primarycolor
+.secondary-color
+    color: $secondarycolor
+.btn:focus
+    outline: none
+    box-shadow: 0 0 0 
+.btn-default, .btn-secondary
+    background: $primarycolor
+    border-radius: 0
+    font-size: 16px
+    font-weight: 700
+    color: $primarycolor
+    border: 1px solid transparent
+    transition: all 0.3s
+    padding: 12px 25px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+    min-width: 130px
+    border-radius: 0 0 15px 0
+    &:hover
+        color: #fff !important
+        background:  $primarycolor !important
+        border-color: $primarycolor
+        border-radius: 0 
+.btn-secondary
+    background: $secondarycolor
+.top-header
+    padding: 5px 0
+    background: #030304
+    position: relative
+    z-index: 11
+    ul.nav
+        .nav-link , a
+            color: #fff
+        a
+            color: #fff
+            margin-left: 8px
+.hori-devider
+    width: 60px
+    height: 1px
+    background: $secondarycolor
+.header
+    padding: 0px 0
+    width: 100%
+    z-index: 999
+    position: sticky
+    top: 0
+    background: #fff
+    padding: 8px 0
+    .navbar-nav .nav-link
+        font-size: 16px 
+        color: #000
+        margin-right: 20px
+        margin-left: 20px
+        font-weight: 500
+        text-transform: uppercase
+        border-bottom: 1px solid transparent
+        padding-bottom: 2px
+        margin-top: 4px
+        &.active, &:hover
+            border-bottom: 1px solid $secondarycolor
+    .btn-secondary
+        margin-left: 30px
+    &.darkHeader
+        background: #fff
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.32)
+        .navbar-brand img
+            width: 90px
+        .navbar-nav .nav-link
+            color: #000
+.swiper 
+    overflow: hidden
+    position: relative
+.home-slider
+    background: url(assets/imgs/slider-bg.png) no-repeat
+    background-size: cover
+    background-position: bottom right
+    .swiper-pagination-bullets
+        bottom: 60px
+        .swiper-pagination-bullet
+            width: 40px
+            height: 1px
+            display: inline-block
+            border-radius: 0
+            background: #ffffff
+            opacity: .2
+            &.swiper-pagination-bullet-active
+                background: $primarycolor
+                opacity: 1
+    .swiper-slide
+        position: relative
+        padding: 40px 0 80px
+        .slider-caption
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            .content
+                color: #fff
+                font-size: 16px
+                p
+                    max-width: 700px
+                    margin: 0 auto
+                .slider-taglinge
+                    font-size: 30px
+                    color: #fff
+                .slide-name
+                    text-transform: uppercase
+                    font-size: 46px
+                    color: #000
+                    font-weight: 700
+                    line-height: 54px
+            .slide-name
+                    font-size: 64px
+                    line-height: 80px
+                    font-weight: 800
+                    color: #fff
+                    margin: 0 auto 20px
+            .btn-default
+                background: #fff
+                color: $primarycolor
+                text-transform: capitalize
+.section-space
+    padding: 60px 0
+.section-title
+    font-size: 36px
+    font-weight: 700
+    margin: 0 0 15px
+    color: $primarycolor
+.details-text
+    font-size: 18px
+    line-height: 32px
+    margin: 0 0 15px
+    color: #2d2d2d
+.cover-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+.rate-icon
+    position: absolute
+    bottom: -20px
+    left: -20px
+.index-bee-icon
+    margin: 20px 0 0 -80px
+.video-player
+    position: relative
+    overflow: hidden
+    img.video-img
+        min-height: 250px
+        object-fit: cover
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 100%
+        background: #000
+        opacity: .65
+    .player-control
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        z-index: 1
+.modal-close-btn
+    position: absolute
+    right: 20px
+    top: 20px
+    font-size: 20px
+    background: transparent
+    border: 0
+    color: #fff
+.md-section-title
+    font-size: 20px
+    line-height: 32px
+    margin: 0 0 15px
+    color: #2d2d2d
+    font-weight: 500
+.cate-conent-box
+    padding: 30px 20px
+    border: 1px solid $secondarycolor
+    margin-top: 30px
+    transition: all 0.3s
+    background-position: 90% 90%
+    .cate-icon
+        margin: 0 auto 20px
+        display: block
+        height: 70px
+        object-fit: contain
+    .md-section-title
+        padding: 0 
+        line-height: 28px
+        color: #0c0c0c
+    .details-text
+        font-size: 16px
+        line-height: 24px
+        margin: 0
+    &:hover
+        background: $secondarycolor no-repeat
+        background-image: url(assets/imgs/background-bee.png)
+        background-position: 90% 90%
+        background-size: 100px
+        border-radius: 0 0 25px 0
+        .details-text
+            color: #fff
+        .cate-icon
+            filter: brightness(0)
+.bee-border
+    margin: -20px auto 30px
+    img
+        display: block
+        margin: 0 auto
+        max-width: 96%
+.angle-icon
+    position: absolute
+    right: -150px
+    top: 50px
+.scroll-hidden
+    overflow: hidden
+.review-section
+    background: url(assets/imgs/review-bg.png) no-repeat #000
+    background-position: center
+    background-size: 100% 100%
+    .google-icon
+        height: 80px
+        margin-right: 20px
+    .section-title
+        color: $secondarycolor
+    .details-text
+        margin: 0
+        color: #fff
+.news-box
+    width: calc(100% - 15px)
+    margin: 30px auto 0
+    padding: 10px
+    border-radius: 8px
+    .plus-icon
+        display: none
+    .news-img-wrapper
+        position: relative
+        border-radius: 8px
+        margin-bottom: 20px
+        .angle-news-icon
+            position: absolute
+            bottom: 0
+            right: -24px
+            height: 70px
+            width: auto
+        img 
+            height: 260px
+            width: 100%
+            object-fit: cover
+            border-radius: 8px
+    .md-section-title
+        font-weight: 700
+        color: #030304
+    .details-text
+        font-size: 16px
+        line-height: 24px
+        margin: 0
+    .hover-space
+        transition: all 0.3s
+    &:hover
+        box-shadow: 0 10px 11px #00000021
+        .plus-icon
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            width: 100%
+            background: rgba(0, 0, 0, 0.8)
+            @include dflex-center
+            font-size: 24px
+            color: #fff
+            border-radius: 8px
+        .hover-space
+            border-radius: 0 0 8px 8px
+.stream-section
+    background: #fff3dc
+    position: relative
+    .stream-bee
+        position: absolute
+        bottom: 20px
+        left: -10px
+        width: 110px
+    a.btn
+        position: relative
+.newsletter-wrapper
+    background: url(assets/imgs/letter-bg.png) no-repeat #000
+    background-position: center
+    background-size: cover
+    text-align: center
+    padding: 20px 20px 40px
+    border-radius: 0 0 70px 0
+    position: relative
+    .details-text
+        color: #070708
+        font-weight: 500
+    .btn-secondary
+        background: #fff
+        color: #070708
+.footer
+    padding: 150px 20px 30px
+    margin-top: -130px
+    background: url(assets/imgs/footer-bg.png) no-repeat #000
+    background-position: center
+    background-size: cover
+    .ft-title
+        font-size: 20px
+        font-weight: 500
+        color: #fff
+        position: relative
+        margin: 0 0 30px
+        &:after
+            content: ''
+            width: 40px
+            height: 3px
+            background: $secondarycolor
+            position: absolute
+            bottom: -10px
+            left: 0
+    .details-text, .ft-links
+        color: #fff
+        font-size: 16px
+    .email-form
+        display: flex
+        input
+            border: 0
+            border-radius: 0
+            padding: 14px
+            font-size: 16px
+        .btn
+            border-radius: 0
+            border: 1px solid $secondarycolor
+            min-width: 50px
+            margin-left: 16px
+            &:hover
+                background: $secondarycolor
+    .fab
+        color: $secondarycolor
+    .footer-bee-img
+        max-width: 98%
+        display: block
+        margin: 0 auto
+    .footer-bee-bg
+        margin-top: -110px
+.content-bg
+    background: url(assets/imgs/content-bg.png) no-repeat
+    background-size: cover
+    background-position: bottom right
+.features-label
+    display: inline-flex
+    align-items: center
+    padding: 12px 18px
+    background: #fff3dd
+    font-size: 20px
+    font-weight: 500
+    border-radius: 8px
+    margin: 5px 10px 0 0 
+    img
+        width: 30px
+        margin-right: 8px
+.contact-box
+    width: 270px
+    max-width: 100%
+    margin: 30px auto 0
+    box-shadow: 0 10px 11px #00000021
+    border-color: transparent
+    transition: border-radius .3s
+    .md-section-title
+        font-weight: 700
+        margin-bottom: 10px
+    &:hover
+        background-color: #fff3dc
+        border: 1px solid #f1c30f
+        box-shadow: 0 0 0
+        .details-text
+            color: #2d2d2d
+        .cate-icon
+            filter: none
+.contact-form-section
+    background: url(assets/imgs/ct-bg.png) no-repeat
+    background-size: 100%  100%
+    .section-title
+        font-size: 28px
+        color: $secondarycolor
+    .details-text
+        color: #fff
+    .ct-form
+        padding: 30px
+        border-radius: 10px
+        background: #fff
+        position: relative
+        .form-angle-icon
+            position: absolute
+            bottom: -27px
+            right: 40px
+        .form-control
+            border: 1px solid  $secondarycolor
+            border-radius: 0
+            padding: 14px
+            font-size: 16px
+            box-shadow: 0 0 0 !important
+.map-iframe
+    height: 350px
+    width: 100%
+    border: 1px solid #f1f1f1
+.bee-border.flip-border
+    transform: scaleX(-1)
+.pagination
+    .page-link
+        margin: 0 5px
+        border: 1px solid #ccc
+        font-size: 16px
+        color: #070708
+        font-weight: 500
+        width: 36px
+        text-align: center
+        border-radius: 5px
+        &:hover
+            border-color: $primarycolor
+        &.active
+            background: $primarycolor
+            color: $secondarycolor
+.pricing-box
+    text-align: center
+    padding: 30px 20px
+    border-radius: 0 0 30px 0
+    margin: 30px auto 0
+    color: #2d2d2d
+    background: url(assets/imgs/price-bee-bg.png) no-repeat  #fff3dc
+    background-position: 100px -15%
+    &:hover
+        background-color: #191919
+        color: #fff
+        .details-text, p
+            color: #fff
+        .price
+            color: $secondarycolor
+        .btn
+            background: #fff
+.ct-form.login-form
+    .form-control
+        border: 0
+    .form-group
+        display: flex
+        align-items: center
+        border-bottom: 1px solid $secondarycolor
+    .details-text
+        color: #2d2d2d
+        font-size: 16px
+    a
+        text-decoration: underline !important
+        color: #2d2d2d
+@media (max-width: 1400px)
+    .angle-icon
+        right: -80px
+@media (max-width: 1199px)
+    .angle-icon
+        right: -60px
+    .stream-section .stream-bee
+        width: 80px
+    .features-label
+        font-size: 18px
+@media (max-width: 992px)
+    .header
+        .navbar-brand img
+            height: 60px
+        .navbar-toggler
+            background: $secondarycolor
+            color: #fff
+            margin-left: auto
+            padding: 8px 12px
+        .navbar-collapse
+            position: absolute
+            top: 100%
+            left: 0
+            background: #fff
+            width: 100%
+            overflow: auto
+            display: block
+            transition: all 0.3s
+            padding: 20px
+            max-height: 0
+            box-shadow: 0 1px 40px rgba(0, 0, 0, 0.09)
+            visibility: hidden
+            .btn-secondary
+                margin-left: 20px
+                margin-top: 10px
+            &.show
+                visibility: visible
+                max-height: 1000px
+            .navbar-toggler
+                position: absolute
+                top: 16px
+                right: 14px
+                svg
+                    width: 34px
+                    height: 34px
+    .home-slider .swiper-slide 
+        .slider-caption
+            text-align: center
+            .content
+                padding: 20px 20px 30px
+        .slide-img
+            max-width: 400px
+            margin: 0 auto
+            display: block
+        .slide-name
+            font-size: 36px
+            line-height: 50px
+    .index-bee-icon
+        margin: 20px auto 0
+        display: block
+    .section-title
+        font-size: 32px
+    .stream-section
+        text-align: center
+        .gstream-img
+            width: 230px
+            display: block
+            margin: 0 auto 30px
+    .newsletter-wrapper
+        background-position: -100px
+    .footer
+        padding: 100px 20px 30px
+        .footer-bee-bg
+            margin: 10px -15px
+        .ft-title
+            margin: 20px 0 30px
+@media (max-width: 767px)
+    .btn-default, .btn-secondary
+        font-size: 14px
+
+    .home-slider
+        .swiper-slide
+            padding: 20px 0 70px
+            .slider-caption  .content
+                .slide-name
+                    font-size: 30px
+                    line-height: 40px
+                .slider-taglinge
+                    font-size: 24px
+                    margin-bottom: 10px
+                    display: block
+                .btn
+                    margin: 0 0 5px  
+    .section-space
+        padding: 40px 0
+    .section-title
+        font-size: 28px
+    .review-section .google-icon
+        height: 65px
+        margin-right: 12px
+@media (max-width: 567px)
+    .header 
+        .navbar > .container
+            display: flex
+            flex-wrap: nowrap
+    .rate-icon
+        bottom: -10px
+        left: 30px
+    .content-bg
+        background-position: bottom left
